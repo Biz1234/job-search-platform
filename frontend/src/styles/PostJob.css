@@ -1,0 +1,167 @@
+.post-job {
+    max-width: 700px; /* Slightly wider for form comfort */
+    margin: 90px auto 50px; /* Matches dashboard spacing for header */
+    padding: 30px;
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-job:hover {
+    transform: translateY(-3px); /* Subtle lift on hover */
+    box-shadow: 0 10px 20px var(--shadow);
+}
+
+.post-job h1 {
+    font-size: 2.5rem; /* Larger for emphasis */
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+.post-job form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Increased for better spacing */
+    background: rgba(0, 0, 0, 0.02); /* Subtle tint */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.post-job input,
+.post-job select,
+.post-job textarea {
+    padding: 12px 15px; /* Larger padding for comfort */
+    border: 1px solid var(--shadow);
+    border-radius: 8px;
+    background: var(--card-bg);
+    color: var(--text-color);
+    font-size: 1.1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.post-job input:focus,
+.post-job select:focus,
+.post-job textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); /* Subtle glow */
+    outline: none;
+}
+
+.post-job textarea {
+    min-height: 140px; /* Taller for job descriptions */
+    resize: vertical;
+}
+
+/* Button Styling */
+.post-job button {
+    padding: 14px 30px; /* Larger for prominence */
+    background-color: #6f42c1; /* Purple, consistent with Post Job in Dashboard */
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    margin-top: 10px; /* Space from last input */
+}
+
+.post-job button:hover {
+    background-color: #5a32a3;
+    transform: scale(1.05);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode Adjustments */
+[data-theme="dark"] .post-job {
+    background: #2c2c2c;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .post-job h1 {
+    color: #66b0ff; /* Matches primary color in dark mode */
+}
+
+[data-theme="dark"] .post-job form {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .post-job input,
+[data-theme="dark"] .post-job select,
+[data-theme="dark"] .post-job textarea {
+    background: #3a3a3a;
+    color: #ffffff;
+    border-color: #555555;
+}
+
+[data-theme="dark"] .post-job button {
+    background-color: #6f42c1;
+}
+
+[data-theme="dark"] .post-job button:hover {
+    background-color: #5a32a3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .post-job {
+        max-width: 100%;
+        margin: 70px 15px 30px; /* Adjusted for smaller screens */
+        padding: 20px;
+    }
+
+    .post-job h1 {
+        font-size: 2rem;
+    }
+
+    .post-job form {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .post-job input,
+    .post-job select,
+    .post-job textarea {
+        font-size: 1rem;
+    }
+
+    .post-job button {
+        padding: 12px 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .post-job {
+        padding: 15px;
+    }
+
+    .post-job h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .post-job form {
+        padding: 10px;
+    }
+
+    .post-job input,
+    .post-job select,
+    .post-job textarea {
+        padding: 10px 12px;
+    }
+
+    .post-job textarea {
+        min-height: 120px;
+    }
+
+    .post-job button {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+}

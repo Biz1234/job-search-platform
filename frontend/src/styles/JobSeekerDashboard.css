@@ -1,0 +1,357 @@
+/* src/styles/JobSeekerDashboard.css */
+.job-seeker-dashboard {
+    max-width: 1200px;
+    margin: 90px auto 50px;
+    padding: 20px;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, rgba(245, 245, 245, 0.2), rgba(245, 245, 245, 0));
+}
+
+/* Main Heading */
+.job-seeker-dashboard h1 {
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Containers */
+.section {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 6px 15px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--shadow);
+}
+
+/* Section Headings */
+.section h2 {
+    font-size: 1.9rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 8px;
+    font-weight: 600;
+}
+
+/* List Styling */
+.section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.section li {
+    display: grid;
+    grid-template-columns: 1fr auto; /* Job info left, buttons right */
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid var(--shadow);
+    font-size: 1.1rem;
+    color: var(--text-color);
+    border-radius: 8px;
+    transition: background-color 0.2s ease;
+}
+
+.section li:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.section li:last-child {
+    border-bottom: none;
+}
+
+.section li span {
+    margin-right: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.section li div {
+    display: flex;
+    gap: 15px; /* Consistent, spacious gap */
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+/* Empty State Text */
+.section p {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    text-align: center;
+    padding: 25px;
+    opacity: 0.7;
+    font-style: italic;
+}
+
+/* Profile Prompt */
+.profile-prompt {
+    background: rgba(255, 193, 7, 0.15);
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px var(--shadow-light);
+}
+
+.profile-prompt p {
+    margin: 0 0 15px;
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.filters input,
+.filters select {
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--card-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+    min-width: 200px; /* Wider for better usability */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.filters input:focus,
+.filters select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+    outline: none;
+}
+
+/* Button Styling */
+.job-seeker-dashboard button,
+.profile-prompt button,
+.edit-profile-btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    min-width: 140px; /* Uniform width */
+}
+
+/* View Details Button */
+.view-details {
+    background-color: var(--primary-color); /* #007bff */
+}
+
+.view-details:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Apply Button */
+.apply-btn {
+    background-color: var(--secondary-color); /* #00cc00 */
+}
+
+.apply-btn:hover {
+    background-color: #00b300;
+    transform: scale(1.05);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Save Button */
+.save-btn {
+    background-color: #17a2b8; /* Teal for distinction */
+}
+
+.save-btn:hover {
+    background-color: #138496;
+    transform: scale(1.05);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Remove Button */
+.remove-btn {
+    background-color: var(--danger-color); /* #dc3545 */
+}
+
+.remove-btn:hover {
+    background-color: #b02a37;
+    transform: scale(1.05);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Edit Profile Button */
+.edit-profile-btn {
+    display: block;
+    width: 220px;
+    margin: 0 auto 30px;
+    background-color: var(--accent-color); /* #6f42c1 */
+}
+
+.edit-profile-btn:hover {
+    background-color: #5a32a3;
+    transform: scale(1.05);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Prompt Button */
+.profile-prompt button {
+    background-color: var(--warning-color); /* #f39c12 */
+}
+
+.profile-prompt button:hover {
+    background-color: #e08e0b;
+    transform: scale(1.05);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Status Highlights */
+.status-pending {
+    background: rgba(255, 193, 7, 0.15);
+}
+
+.status-accepted {
+    background: rgba(40, 167, 69, 0.15);
+}
+
+.status-rejected {
+    background: rgba(220, 53, 69, 0.15);
+}
+
+/* Dark Mode Adjustments */
+[data-theme="dark"] .job-seeker-dashboard {
+    background: linear-gradient(to bottom, rgba(44, 44, 44, 0.2), rgba(44, 44, 44, 0));
+}
+
+[data-theme="dark"] .section {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .section h2,
+[data-theme="dark"] .section li,
+[data-theme="dark"] .profile-prompt p {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .section p {
+    color: var(--text-color);
+}
+
+[data-theme="dark"] .filters input,
+[data-theme="dark"] .filters select {
+    background: var(--card-bg);
+    color: var(--text-color);
+    border-color: var(--border-color);
+}
+
+[data-theme="dark"] .status-pending {
+    background: rgba(255, 193, 7, 0.25);
+}
+
+[data-theme="dark"] .status-accepted {
+    background: rgba(40, 167, 69, 0.25);
+}
+
+[data-theme="dark"] .status-rejected {
+    background: rgba(220, 53, 69, 0.25);
+}
+
+[data-theme="dark"] .profile-prompt {
+    background: rgba(255, 193, 7, 0.25);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .job-seeker-dashboard {
+        padding: 15px;
+    }
+
+    .job-seeker-dashboard h1 {
+        font-size: 2.2rem;
+    }
+
+    .section {
+        padding: 20px;
+    }
+
+    .section h2 {
+        font-size: 1.6rem;
+    }
+
+    .section li {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+        gap: 12px;
+        padding: 12px;
+    }
+
+    .section li div {
+        width: 100%;
+        justify-content: flex-start;
+        gap: 10px;
+    }
+
+    .job-seeker-dashboard button,
+    .profile-prompt button,
+    .edit-profile-btn {
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .edit-profile-btn {
+        width: 180px;
+    }
+
+    .filters {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filters input,
+    .filters select {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .job-seeker-dashboard h1 {
+        font-size: 1.8rem;
+    }
+
+    .section {
+        padding: 15px;
+    }
+
+    .section h2 {
+        font-size: 1.4rem;
+    }
+
+    .section li {
+        padding: 10px;
+    }
+
+    .section p {
+        font-size: 1rem;
+    }
+}

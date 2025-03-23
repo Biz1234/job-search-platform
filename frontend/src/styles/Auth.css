@@ -1,0 +1,44 @@
+.auth-container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 5px 15px var(--shadow);
+}
+
+.auth-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.auth-container input,
+.auth-container select {
+    padding: 10px;
+    border: 1px solid var(--shadow);
+    border-radius: 5px;
+    background: var(--card-bg);
+    color: var(--text-color);
+}
+
+.auth-container button {
+    padding: 10px;
+    background-color: var(--accent-color);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-container button:hover {
+    background-color: var(--accent-color);
+    filter: brightness(1.1);
+}

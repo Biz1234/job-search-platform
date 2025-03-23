@@ -1,0 +1,44 @@
+/* src/styles/ThemeToggle.css */
+.theme-toggle {
+    padding: 10px 20px; /* Consistent with other buttons */
+    background-color: #007bff; /* Blue, matches primary color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.theme-toggle:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.05);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode Adjustments */
+[data-theme="dark"] .theme-toggle {
+    background-color: #66b0ff;
+}
+
+[data-theme="dark"] .theme-toggle:hover {
+    background-color: #4a90e2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .theme-toggle {
+        padding: 8px 16px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .theme-toggle {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+        border-radius: 6px;
+    }
+}

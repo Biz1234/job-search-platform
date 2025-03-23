@@ -1,0 +1,128 @@
+.featured-jobs {
+    max-width: 1200px;
+    margin: 90px auto 50px; /* Matches other sections with header spacing */
+    padding: 0 20px;
+}
+
+.featured-jobs h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+/* Grid layout for job cards */
+.jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* Individual job card */
+.job-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 6px 15px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px var(--shadow);
+}
+
+/* Job title */
+.job-card h3 {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* Job details */
+.job-card p {
+    font-size: 1rem;
+    color: var(--text-color);
+    opacity: 0.85;
+    margin: 5px 0;
+}
+
+/* View Details button */
+.job-card button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    margin-top: 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.job-card button:hover {
+    background-color: var(--primary-color);
+    filter: brightness(1.1);
+    transform: scale(1.02);
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .job-card {
+    background: #2c2c2c;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .featured-jobs h2 {
+    color: #66b0ff;
+}
+
+[data-theme="dark"] .job-card h3,
+[data-theme="dark"] .job-card p {
+    color: #ffffff;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .featured-jobs h2 {
+        font-size: 2rem;
+    }
+
+    .jobs-grid {
+        grid-template-columns: 1fr; /* Stack cards on smaller screens */
+    }
+
+    .job-card {
+        padding: 20px;
+    }
+
+    .job-card h3 {
+        font-size: 1.3rem;
+    }
+
+    .job-card button {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .featured-jobs {
+        padding: 0 15px;
+    }
+
+    .job-card {
+        padding: 15px;
+    }
+
+    .job-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .job-card p {
+        font-size: 0.9rem;
+    }
+}

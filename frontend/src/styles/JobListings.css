@@ -1,0 +1,36 @@
+.job-listings {
+    padding: 50px 20px;
+    background-color: var(--background-color);
+}
+
+.job-listings h1 {
+    color: var(--text-color);
+}
+
+.filters select {
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    border: 1px solid var(--shadow);
+}
+
+.job-card {
+    background: var(--card-bg);
+    box-shadow: 0 5px 15px var(--shadow);
+}
+
+.job-card:hover {
+    box-shadow: 0 5px 15px var(--shadow);
+}
+
+.job-card h3 {
+    color: var(--primary-color);
+}
+
+.job-card button {
+    background-color: var(--accent-color);
+}
+
+.job-card button:hover {
+    background-color: var(--accent-color);
+    filter: brightness(1.1);
+}

@@ -1,0 +1,219 @@
+.profile-edit {
+    max-width: 700px; /* Wider for form comfort */
+    margin: 90px auto 50px; /* Consistent with other pages */
+    padding: 30px;
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-edit:hover {
+    transform: translateY(-3px); /* Subtle lift on hover */
+    box-shadow: 0 10px 20px var(--shadow);
+}
+
+.profile-edit h1 {
+    font-size: 2.5rem; /* Larger for emphasis */
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+.profile-edit form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Increased for better spacing */
+    background: rgba(0, 0, 0, 0.02); /* Subtle tint */
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.profile-edit input,
+.profile-edit textarea {
+    padding: 12px 15px; /* Larger padding for comfort */
+    border: 1px solid var(--shadow);
+    border-radius: 8px;
+    background: var(--card-bg);
+    color: var(--text-color);
+    font-size: 1.1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-edit input:focus,
+.profile-edit textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3); /* Subtle glow */
+    outline: none;
+}
+
+.profile-edit input[type="file"] {
+    padding: 8px 0; /* Adjusted for file input */
+    border: none; /* Cleaner look for file input */
+    background: none; /* Matches form tint */
+}
+
+.profile-edit textarea {
+    min-height: 140px; /* Taller for bio/description */
+    resize: vertical;
+}
+
+.file-note {
+    font-size: 0.95rem; /* Slightly larger for readability */
+    color: var(--text-color);
+    opacity: 0.7;
+    margin-top: -8px; /* Closer to file input */
+    font-style: italic;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    gap: 20px; /* Increased for better separation */
+    justify-content: center;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Responsive stacking */
+}
+
+/* Button Styling */
+.profile-edit button {
+    padding: 12px 25px; /* Larger for prominence */
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    min-width: 160px; /* Uniform width */
+}
+
+.profile-edit button[type="submit"] {
+    background-color: #007bff; /* Blue, consistent with Save/View Details */
+}
+
+.profile-edit button[type="submit"]:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+.profile-edit button[type="button"] {
+    background-color: #6c757d; /* Gray for Cancel */
+}
+
+.profile-edit button[type="button"]:hover {
+    background-color: #5a6268;
+    transform: scale(1.05);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode Adjustments */
+[data-theme="dark"] .profile-edit {
+    background: #2c2c2c;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .profile-edit h1,
+[data-theme="dark"] .file-note {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .profile-edit form {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .profile-edit input,
+[data-theme="dark"] .profile-edit textarea {
+    background: #3a3a3a;
+    color: #ffffff;
+    border-color: #555555;
+}
+
+[data-theme="dark"] .profile-edit button[type="submit"] {
+    background-color: #007bff;
+}
+
+[data-theme="dark"] .profile-edit button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+[data-theme="dark"] .profile-edit button[type="button"] {
+    background-color: #6c757d;
+}
+
+[data-theme="dark"] .profile-edit button[type="button"]:hover {
+    background-color: #5a6268;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-edit {
+        max-width: 100%;
+        padding: 20px;
+        margin: 70px 15px 30px;
+    }
+
+    .profile-edit h1 {
+        font-size: 2rem;
+    }
+
+    .profile-edit form {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .profile-edit input,
+    .profile-edit textarea {
+        font-size: 1rem;
+    }
+
+    .form-actions {
+        gap: 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-edit button {
+        padding: 10px 20px;
+        min-width: 140px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-edit {
+        padding: 15px;
+    }
+
+    .profile-edit h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .profile-edit form {
+        padding: 10px;
+    }
+
+    .profile-edit input,
+    .profile-edit textarea {
+        padding: 10px 12px;
+    }
+
+    .profile-edit textarea {
+        min-height: 120px;
+    }
+
+    .file-note {
+        font-size: 0.9rem;
+    }
+
+    .profile-edit button {
+        padding: 10px 20px;
+        font-size: 1rem;
+        min-width: 130px;
+    }
+}

@@ -1,0 +1,122 @@
+.job-categories {
+    max-width: 1200px;
+    margin: 50px auto; /* Reduced top margin since it’s not the first section */
+    padding: 0 20px;
+}
+
+.job-categories h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+/* Grid layout for category cards */
+.categories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+/* Individual category card */
+.category-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    cursor: pointer; /* Indicates interactivity */
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 18px var(--shadow);
+    background-color: var(--accent-color); /* Slight tint on hover */
+}
+
+/* Category icon */
+.category-icon {
+    font-size: 2.5rem; /* Larger icons for visual impact */
+    display: block;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+}
+
+.category-card:hover .category-icon {
+    transform: scale(1.1); /* Subtle icon bounce on hover */
+}
+
+/* Category name */
+.category-card h3 {
+    font-size: 1.3rem;
+    color: var(--text-color);
+    font-weight: 500;
+    margin: 0;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .category-card {
+    background: #2c2c2c;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .job-categories h2 {
+    color: #66b0ff;
+}
+
+[data-theme="dark"] .category-card h3 {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .category-card:hover {
+    background-color: #3a3a3a; /* Darker tint on hover in dark mode */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .job-categories h2 {
+        font-size: 2rem;
+    }
+
+    .categories-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 20px;
+    }
+
+    .category-card {
+        padding: 15px;
+    }
+
+    .category-icon {
+        font-size: 2rem;
+    }
+
+    .category-card h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .job-categories {
+        padding: 0 15px;
+    }
+
+    .categories-grid {
+        grid-template-columns: 1fr; /* Stack cards on very small screens */
+    }
+
+    .category-card {
+        padding: 12px;
+    }
+
+    .category-icon {
+        font-size: 1.8rem;
+    }
+
+    .category-card h3 {
+        font-size: 1.1rem;
+    }
+}

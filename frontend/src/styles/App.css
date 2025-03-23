@@ -1,0 +1,90 @@
+.app-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end; /* Keep items on the right */
+    align-items: center;
+    padding: 10px 20px;
+    background: var(--card-bg);
+    box-shadow: 0 2px 5px var(--shadow);
+    z-index: 1000;
+}
+
+.theme-toggle {
+    margin-right: 10px; /* Add gap between toggle and auth buttons */
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 15px; /* Space between Sign Up and Login buttons */
+}
+
+.auth-btn {
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 1001;
+}
+
+/* Sign Up Button */
+.signup-btn {
+    background-color: var(--primary-color);
+}
+
+.signup-btn:hover {
+    background-color: var(--primary-color);
+    filter: brightness(1.1);
+    transform: scale(1.05);
+}
+
+/* Login Button */
+.login-btn {
+    background-color: var(--accent-color);
+   
+}
+
+.login-btn:hover {
+    background-color: var(--accent-color);
+    filter: brightness(1.1);
+    transform: scale(1.05);
+}
+
+/* Logout Button */
+.logout-btn {
+    background-color: var(--accent-color);
+    border: none;
+    cursor: pointer;
+    margin-left: 20px; /* Gap when only logout is shown */
+}
+
+.logout-btn:hover {
+    background-color: var(--accent-color);
+    filter: brightness(1.1);
+    transform: scale(1.05);
+}
+
+/* Ensure content isn’t hidden under header */
+.App {
+    padding-top: 60px;
+}
+
+/* Dark mode adjustments */
+[data-theme="dark"] .app-header {
+    background: #333333; /* Consistent dark background */
+}
+
+[data-theme="dark"] .auth-btn {
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+[data-theme="dark"] .theme-toggle {
+    background-color: #444444; /* Slightly lighter for toggle */
+    color: #ffffff;
+}

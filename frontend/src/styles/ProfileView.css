@@ -1,0 +1,169 @@
+.profile-view {
+    max-width: 700px; /* Slightly wider for better content spread */
+    margin: 90px auto 50px; /* Consistent with other pages */
+    padding: 30px;
+    background: var(--card-bg);
+    border-radius: 12px;
+    box-shadow: 0 6px 15px var(--shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-view:hover {
+    transform: translateY(-3px); /* Subtle lift on hover */
+    box-shadow: 0 10px 20px var(--shadow);
+}
+
+.profile-view h1 {
+    font-size: 2.5rem; /* Larger for prominence */
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 700;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile Info */
+.profile-info {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.02); /* Subtle tint for separation */
+    border-radius: 8px;
+}
+
+.profile-info p {
+    font-size: 1.2rem; /* Larger for readability */
+    color: var(--text-color);
+    margin: 15px 0;
+    line-height: 1.6; /* Improved readability */
+    display: flex;
+    justify-content: space-between; /* Aligns labels and values */
+    flex-wrap: wrap;
+}
+
+.profile-info p strong {
+    color: var(--text-color);
+    font-weight: 600; /* Bold labels */
+    min-width: 150px; /* Consistent label width */
+}
+
+.profile-info a {
+    color: #007bff; /* Matches other links */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.profile-info a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Button Styling */
+.profile-view button {
+    display: block;
+    margin: 30px auto 0; /* More top margin for breathing room */
+    padding: 12px 25px; /* Larger for prominence */
+    background-color: #6f42c1; /* Purple, consistent with Edit Profile */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    min-width: 180px; /* Uniform width */
+}
+
+.profile-view button:hover {
+    background-color: #5a32a3;
+    transform: scale(1.05);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode Adjustments */
+[data-theme="dark"] .profile-view {
+    background: #2c2c2c;
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .profile-view h1,
+[data-theme="dark"] .profile-info p,
+[data-theme="dark"] .profile-info p strong {
+    color: #ffffff;
+}
+
+[data-theme="dark"] .profile-info {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .profile-info a {
+    color: #66b0ff;
+}
+
+[data-theme="dark"] .profile-info a:hover {
+    color: #4a90e2;
+}
+
+[data-theme="dark"] .profile-view button {
+    background-color: #6f42c1;
+}
+
+[data-theme="dark"] .profile-view button:hover {
+    background-color: #5a32a3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-view {
+        max-width: 100%;
+        padding: 20px;
+        margin: 70px 15px 30px;
+    }
+
+    .profile-view h1 {
+        font-size: 2rem;
+    }
+
+    .profile-info {
+        padding: 15px;
+    }
+
+    .profile-info p {
+        font-size: 1.1rem;
+        flex-direction: column; /* Stack label and value on smaller screens */
+        gap: 5px;
+    }
+
+    .profile-info p strong {
+        min-width: 100%; /* Full width on mobile */
+    }
+
+    .profile-view button {
+        padding: 10px 20px;
+        min-width: 160px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-view {
+        padding: 15px;
+    }
+
+    .profile-view h1 {
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    .profile-info p {
+        font-size: 1rem;
+    }
+
+    .profile-info {
+        padding: 10px;
+    }
+
+    .profile-view button {
+        font-size: 1rem;
+        min-width: 140px;
+    }
+}
