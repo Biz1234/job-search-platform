@@ -13,6 +13,7 @@ function FeaturedJobs() {
             .catch(error => console.error('Error fetching featured jobs:', error));
     }, []);
 
+    //display featured jobs
     return (
         <section className="featured-jobs">
             <h2>All Jobs</h2>
