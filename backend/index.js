@@ -301,7 +301,7 @@ app.post('/profile', authenticateToken, upload.single('resume'), (req, res) => {
     });
 });
 
-/* Get Profile (including resume path)
+//Get Profile (including resume path)
 app.get('/profile/:user_id', authenticateToken, (req, res) => {
     const { user_id } = req.params;
     const query = 'SELECT * FROM profiles WHERE user_id = ?';
@@ -311,7 +311,7 @@ app.get('/profile/:user_id', authenticateToken, (req, res) => {
         res.json(results[0]);
     });
 });
-*/
+
 app.get('/', (req, res) => {
     res.send('Job Search Platform Backend');
 });
