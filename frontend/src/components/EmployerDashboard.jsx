@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import '../styles/Dashboard.css';
-
-function EmployerDashboard() {
+//creating function
+function  EmployerDashboard() {
     const [data, setData] = useState({ posted: [], applications: [] });
     const token = localStorage.getItem('token');
     const navigate = useNavigate();
